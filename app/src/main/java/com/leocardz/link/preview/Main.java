@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,6 +22,8 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.koushikdutta.urlimageviewhelper.UrlImageViewCallback;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 import com.leocardz.link.preview.library.LinkPreviewCallback;
@@ -34,7 +35,7 @@ import java.util.Random;
 
 
 @SuppressWarnings("unused")
-public class Main extends ActionBarActivity {
+public class Main extends AppCompatActivity {
 
     private EditText editText, editTextTitlePost, editTextDescriptionPost;
     private Button submitButton, postButton, randomButton;
@@ -608,17 +609,17 @@ public class Main extends ActionBarActivity {
      * Just a set of urls
      */
     private final String[] RANDOM_URLS = {
-            "http://vnexpress.net/ ",
-            "http://facebook.com/ ",
-            "http://gmail.com",
-            "http://goo.gl/jKCPgp",
-            "http://www3.nhk.or.jp/",
-            "http://habrahabr.ru",
-            "http://www.youtube.com/watch?v=cv2mjAgFTaI",
-            "http://vimeo.com/67992157",
+            "https://vnexpress.net/ ",
+            "https://facebook.com/ ",
+            "https://gmail.com",
+            "https://www3.nhk.or.jp/",
+            "https://habrahabr.ru",
+            "https://www.youtube.com/watch?v=cv2mjAgFTaI",
+            "https://vimeo.com/67992157",
             "https://lh6.googleusercontent.com/-aDALitrkRFw/UfQEmWPMQnI/AAAAAAAFOlQ/mDh1l4ej15k/w337-h697-no/db1969caa4ecb88ef727dbad05d5b5b3.jpg",
-            "http://www.nasa.gov/", "http://twitter.com",
-            "http://bit.ly/14SD1eR"};
+            "https://www.nasa.gov/",
+            "https://twitter.com"
+    };
 
     /**
      * Returns a random url
